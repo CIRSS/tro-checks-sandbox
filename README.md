@@ -25,15 +25,16 @@ candidates change with that release only when it is changed there.
 
 ## Running it
 
-In the top-level directory of this repository, build the Docker image:
+In the top-level directory of this repository, check the candidates and regenerate the reports:
 
 ```
-make build-image
+make build-reports
 ```
 
-Make the candidates, then regenerate the reports:
+This checks the candidates as they are, so a candidate edited by hand is checked as edited. To remake the candidates with `tro-utils`, discarding any such edits:
 
 ```
 make build-candidates
-make build-reports
 ```
+
+These commands automatically download the Docker image they depend on if it isn't already on your machine. To later ensure you have the latest image, run `make pull-image`. After changing the `Dockerfile` locally, rebuild the image with `make build-image`.

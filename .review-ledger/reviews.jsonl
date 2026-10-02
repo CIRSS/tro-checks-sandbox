@@ -46,3 +46,5 @@
 {"kind":"review","path":"arrangements/3-packaged/results.txt","blob":"768ab6c868ac2bcd403169cc97003f70b6ac59c0","by":"Timothy McPhillips","date":"2026-10-02","type":"cursory"}
 {"kind":"review","path":"repro-config","blob":"7ce0a18763b88c0b705e0eac2d75085bbc0d8bdd","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
 {"kind":"review","path":"candidates/manifest.json","blob":"2fe9663890420d1a5679d4daedb3be9653b2d0d6","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"README.md","blob":"0113efd05818de10ba39821b0cdd361e7205775a","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"repro-config","blob":"5518a99dcf8b45af6d6c8600b98d3865fdff80e9","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
