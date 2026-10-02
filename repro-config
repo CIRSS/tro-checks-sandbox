@@ -1,0 +1,22 @@
+REPRO_NAME=tro-utils-checks
+REPRO_DOCKER_ORG=ghcr.io/transparency-certified
+REPRO_IMAGE_TAG=latest
+
+DOCKER_BUILD_PROGRESS=plain
+
+image:                  build-image   ##
+start:                  start-repro   ##
+
+##
+
+-include .review-ledger/host-makefile
+
+.PHONY: update-reviews
+## update-reviews:    Update REVIEWS.md without running the other reports.
+update-reviews: session
+	$(RUN_IN_REPRO) 'make -C ${REPRO_MNT}/.review-ledger -f report-makefile review'
+
+.PHONY: build-candidates
+## build-candidates:  Make the candidates with tro-utils from the arrangements and resources.
+build-candidates: session
+	$(RUN_IN_REPRO) 'bash make-candidates'

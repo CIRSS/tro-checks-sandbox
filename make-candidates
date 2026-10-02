@@ -1,0 +1,107 @@
+#!/usr/bin/env bash
+#
+# Make the candidate TRO declarations with tro-utils. Run from the repository directory.
+
+# ---- Setup -------------------------------------------------------------------
+
+# Fake a fixed time for every command, so that the timestamps in the TRO declarations
+# are always the same.
+export FAKETIME="2026-10-03 12:00:00"
+export LD_PRELOAD=$(echo /usr/lib/*/faketime/libfaketime.so.1)
+
+# A candidate is built up by successive tro-utils commands on one file, so start
+# without the candidates of the previous run.
+rm -f ./candidates/*.jsonld ./candidates/*.sig
+
+
+# ---- 01-builtin-trs-declaration ----------------------------------------------
+# Uses the TRS declaration built into tro-utils, which declares no capabilities,
+# and records one performance representing an analysis.
+
+declaration_01=./candidates/01-builtin-trs-declaration.jsonld
+
+# trp/0 accesses arrangement/0 and contributes to arrangement/1.
+tro-utils --declaration "${declaration_01}" \
+    arrangement add ./arrangements/1-downloaded --comment "Downloaded"
+tro-utils --declaration "${declaration_01}" \
+    arrangement add ./arrangements/2-analyzed --comment "Analyzed"
+tro-utils --declaration "${declaration_01}" \
+    performance add --comment "Analyze data.csv" \
+    --start 2026-10-03T09:10:00 --end 2026-10-03T10:00:00 \
+    --accessed arrangement/0 --modified arrangement/1
+
+
+# ---- 02-readme-trs-declaration -----------------------------------------------
+# As 01, but given the declaration of a TRS, via readme-trs-declaration.jsonld,
+# that can record internet access and provide internet isolation, with a new
+# performance downloading the data before the analysis.
+
+declaration_02=./candidates/02-readme-trs-declaration.jsonld
+
+# trp/0 accesses arrangement/0 and contributes to arrangement/1.
+tro-utils --declaration "${declaration_02}" --profile ./resources/readme-trs-declaration.jsonld \
+    arrangement add ./arrangements/0-staged --comment "Staged"
+tro-utils --declaration "${declaration_02}" \
+    arrangement add ./arrangements/1-downloaded --comment "Downloaded"
+tro-utils --declaration "${declaration_02}" \
+    performance add --comment "Download data.csv" \
+    --start 2026-10-03T09:00:00 --end 2026-10-03T09:05:00 \
+    --accessed arrangement/0 --modified arrangement/1 \
+    --attribute trov:InternetAccessRecording
+
+# trp/1 accesses arrangement/1 and contributes to arrangement/2.
+tro-utils --declaration "${declaration_02}" \
+    arrangement add ./arrangements/2-analyzed --comment "Analyzed"
+tro-utils --declaration "${declaration_02}" \
+    performance add --comment "Analyze data.csv" \
+    --start 2026-10-03T09:10:00 --end 2026-10-03T10:00:00 \
+    --accessed arrangement/1 --modified arrangement/2 \
+    --attribute trov:InternetIsolation
+
+
+# ---- 03-readme-trs-declaration-signed ----------------------------------------
+# As 02, but with a third performance packaging all but the input data file, and
+# signed with trs-key.asc loaded into the local keyring.
+
+gpg --batch --quiet --pinentry-mode loopback --passphrase-file ./resources/trs-key-passphrase \
+    --import ./resources/trs-key.asc
+
+declaration_03=./candidates/03-readme-trs-declaration-signed.jsonld
+
+# trp/0 accesses arrangement/0 and contributes to arrangement/1.
+tro-utils --declaration "${declaration_03}" --profile ./resources/readme-trs-declaration.jsonld \
+    arrangement add ./arrangements/0-staged --comment "Staged"
+tro-utils --declaration "${declaration_03}" \
+    arrangement add ./arrangements/1-downloaded --comment "Downloaded"
+tro-utils --declaration "${declaration_03}" \
+    performance add --comment "Download data.csv" \
+    --start 2026-10-03T09:00:00 --end 2026-10-03T09:05:00 \
+    --accessed arrangement/0 --modified arrangement/1 \
+    --attribute trov:InternetAccessRecording
+
+# trp/1 accesses arrangement/1 and contributes to arrangement/2.
+tro-utils --declaration "${declaration_03}" \
+    arrangement add ./arrangements/2-analyzed --comment "Analyzed"
+tro-utils --declaration "${declaration_03}" \
+    performance add --comment "Analyze data.csv" \
+    --start 2026-10-03T09:10:00 --end 2026-10-03T10:00:00 \
+    --accessed arrangement/1 --modified arrangement/2 \
+    --attribute trov:InternetIsolation
+
+# trp/2 accesses arrangement/2 and contributes to arrangement/3.
+tro-utils --declaration "${declaration_03}" \
+    arrangement add ./arrangements/3-packaged --comment "Packaged"
+tro-utils --declaration "${declaration_03}" \
+    performance add --comment "Package results.txt" \
+    --start 2026-10-03T10:05:00 --end 2026-10-03T10:06:00 \
+    --accessed arrangement/2 --modified arrangement/3 \
+    --attribute trov:InternetIsolation
+
+# This TRO declaration is signed.
+tro-utils --declaration "${declaration_03}" \
+    --gpg-fingerprint 085392E3C3AAFC519E208E6B2750E7ABB53E522C \
+    --gpg-passphrase "$(cat ./resources/trs-key-passphrase)" \
+    sign
+
+# sign also writes a timestamp from an external authority, which differs on every run; it is not kept.
+rm ./candidates/03-readme-trs-declaration-signed.tsr

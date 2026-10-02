@@ -1,0 +1,48 @@
+{"kind":"origin","path":"Makefile","origin":"vendor"}
+{"kind":"origin","path":"Makefile-tests","origin":"vendor"}
+{"kind":"origin","path":".review-ledger/.gitignore","origin":"vendor"}
+{"kind":"origin","path":"REVIEWS.md","origin":"generated"}
+{"kind":"origin","path":".review-ledger/reviews.jsonl","origin":"generated"}
+{"kind":"origin","path":"candidates/01-builtin-trs-declaration.jsonld","origin":"generated"}
+{"kind":"origin","path":"candidates/02-readme-trs-declaration.jsonld","origin":"generated"}
+{"kind":"origin","path":"candidates/03-readme-trs-declaration-signed.jsonld","origin":"generated"}
+{"kind":"origin","path":"candidates/03-readme-trs-declaration-signed.sig","origin":"generated"}
+{"kind":"origin","path":"reports/01-builtin-trs-declaration_0.1_tier-6.md","origin":"generated"}
+{"kind":"origin","path":"reports/01-builtin-trs-declaration_trace-spec-2026-04-19_tier-6.md","origin":"generated"}
+{"kind":"origin","path":"reports/02-readme-trs-declaration_0.1_tier-6.md","origin":"generated"}
+{"kind":"origin","path":"reports/02-readme-trs-declaration_trace-spec-2026-04-19_tier-6.md","origin":"generated"}
+{"kind":"origin","path":"reports/03-readme-trs-declaration-signed_0.1_tier-6.md","origin":"generated"}
+{"kind":"origin","path":"reports/03-readme-trs-declaration-signed_trace-spec-2026-04-19_tier-6.md","origin":"generated"}
+{"kind":"origin","path":"reports/README.md","origin":"generated"}
+{"kind":"origin","path":"arrangements/2-analyzed/results.txt","origin":"generated"}
+{"kind":"origin","path":"arrangements/3-packaged/results.txt","origin":"generated"}
+{"kind":"origin","path":"arrangements/3-packaged/package.zip","origin":"generated"}
+{"kind":"origin","path":"resources/trs-key.asc","origin":"generated"}
+{"kind":"review","path":".gitignore","blob":"fe336436871caee901a3525d77fc42b75b8e0eb5","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"Dockerfile","blob":"ba92e9aa0f0bb70f4822a7b85c7c06d99a420796","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"make-candidates","blob":"fdb56cea31d72d484a029f06b8084a6800d51457","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"README.md","blob":"2558ece8e7eaf6eb3367da8271d825ca55c93c32","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"arrangements/0-staged/analyze.py","blob":"b280d09935a0fb4c25cc20d4d8d8fe5f3faaedc3","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"arrangements/0-staged/download.sh","blob":"b2a97ae08f220a089d563a1588d2ee4452ea748c","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"arrangements/0-staged/package.sh","blob":"dbdfdfd3aa8274d5372127cd00ecb9fec840d826","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"arrangements/1-downloaded/analyze.py","blob":"b280d09935a0fb4c25cc20d4d8d8fe5f3faaedc3","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"arrangements/1-downloaded/data.csv","blob":"cfa20f81071245f292f0b52b37beb7adf9259a26","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"arrangements/1-downloaded/download.sh","blob":"b2a97ae08f220a089d563a1588d2ee4452ea748c","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"arrangements/1-downloaded/package.sh","blob":"dbdfdfd3aa8274d5372127cd00ecb9fec840d826","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"arrangements/2-analyzed/analyze.py","blob":"b280d09935a0fb4c25cc20d4d8d8fe5f3faaedc3","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"arrangements/2-analyzed/data.csv","blob":"cfa20f81071245f292f0b52b37beb7adf9259a26","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"arrangements/2-analyzed/download.sh","blob":"b2a97ae08f220a089d563a1588d2ee4452ea748c","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"arrangements/2-analyzed/package.sh","blob":"dbdfdfd3aa8274d5372127cd00ecb9fec840d826","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"arrangements/3-packaged/analyze.py","blob":"b280d09935a0fb4c25cc20d4d8d8fe5f3faaedc3","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"arrangements/3-packaged/data.csv","blob":"cfa20f81071245f292f0b52b37beb7adf9259a26","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"arrangements/3-packaged/download.sh","blob":"b2a97ae08f220a089d563a1588d2ee4452ea748c","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"arrangements/3-packaged/package.sh","blob":"dbdfdfd3aa8274d5372127cd00ecb9fec840d826","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"arrangements/README.md","blob":"5134b9c7b29e390083076e3e28be22aa3a0b6205","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"resources/README.md","blob":"9acbf7b6ee9de8e170fcc82856a847c7265115ce","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"resources/readme-trs-declaration.jsonld","blob":"d1e875a6b842c977c8fe5b1e44e8078a1faae744","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"resources/trs-key-passphrase","blob":"95d32388f009d2fb1730dbede747e4a751be8717","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"resources/trs-key.asc","blob":"03231014ee2a64f906bdb8c0198f36ed3cb5ad5b","by":"Timothy McPhillips","date":"2026-10-02","type":"cursory"}
+{"kind":"review","path":"arrangements/2-analyzed/results.txt","blob":"768ab6c868ac2bcd403169cc97003f70b6ac59c0","by":"Timothy McPhillips","date":"2026-10-02","type":"cursory"}
+{"kind":"review","path":"arrangements/3-packaged/results.txt","blob":"768ab6c868ac2bcd403169cc97003f70b6ac59c0","by":"Timothy McPhillips","date":"2026-10-02","type":"cursory"}
+{"kind":"review","path":"repro-config","blob":"7ce0a18763b88c0b705e0eac2d75085bbc0d8bdd","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}
+{"kind":"review","path":"candidates/manifest.json","blob":"2fe9663890420d1a5679d4daedb3be9653b2d0d6","by":"Timothy McPhillips","date":"2026-10-02","type":"careful"}

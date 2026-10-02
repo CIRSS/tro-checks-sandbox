@@ -1,0 +1,297 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "trov": "https://w3id.org/trace/trov/0.1#"
+  },
+  "@graph": [
+    {
+      "@id": "tro",
+      "@type": [
+        "trov:TransparentResearchObject",
+        "schema:CreativeWork"
+      ],
+      "schema:creator": "TRO utils",
+      "schema:dateCreated": "2026-10-03T12:00:00",
+      "schema:description": "Some description",
+      "schema:name": "Some TRO",
+      "trov:createdWith": {
+        "@type": "schema:SoftwareApplication",
+        "schema:name": "tro-utils",
+        "schema:softwareVersion": "0.4.6"
+      },
+      "trov:hasArrangement": [
+        {
+          "@id": "arrangement/0",
+          "@type": "trov:ArtifactArrangement",
+          "rdfs:comment": "Staged",
+          "trov:hasArtifactLocation": [
+            {
+              "@id": "arrangement/0/location/0",
+              "@type": "trov:ArtifactLocation",
+              "trov:artifact": {
+                "@id": "composition/1/artifact/0"
+              },
+              "trov:path": "analyze.py"
+            },
+            {
+              "@id": "arrangement/0/location/1",
+              "@type": "trov:ArtifactLocation",
+              "trov:artifact": {
+                "@id": "composition/1/artifact/1"
+              },
+              "trov:path": "download.sh"
+            },
+            {
+              "@id": "arrangement/0/location/2",
+              "@type": "trov:ArtifactLocation",
+              "trov:artifact": {
+                "@id": "composition/1/artifact/2"
+              },
+              "trov:path": "package.sh"
+            }
+          ]
+        },
+        {
+          "@id": "arrangement/1",
+          "@type": "trov:ArtifactArrangement",
+          "rdfs:comment": "Downloaded",
+          "trov:hasArtifactLocation": [
+            {
+              "@id": "arrangement/1/location/0",
+              "@type": "trov:ArtifactLocation",
+              "trov:artifact": {
+                "@id": "composition/1/artifact/0"
+              },
+              "trov:path": "analyze.py"
+            },
+            {
+              "@id": "arrangement/1/location/1",
+              "@type": "trov:ArtifactLocation",
+              "trov:artifact": {
+                "@id": "composition/1/artifact/1"
+              },
+              "trov:path": "download.sh"
+            },
+            {
+              "@id": "arrangement/1/location/2",
+              "@type": "trov:ArtifactLocation",
+              "trov:artifact": {
+                "@id": "composition/1/artifact/2"
+              },
+              "trov:path": "package.sh"
+            },
+            {
+              "@id": "arrangement/1/location/3",
+              "@type": "trov:ArtifactLocation",
+              "trov:artifact": {
+                "@id": "composition/1/artifact/3"
+              },
+              "trov:path": "data.csv"
+            }
+          ]
+        },
+        {
+          "@id": "arrangement/2",
+          "@type": "trov:ArtifactArrangement",
+          "rdfs:comment": "Analyzed",
+          "trov:hasArtifactLocation": [
+            {
+              "@id": "arrangement/2/location/0",
+              "@type": "trov:ArtifactLocation",
+              "trov:artifact": {
+                "@id": "composition/1/artifact/0"
+              },
+              "trov:path": "analyze.py"
+            },
+            {
+              "@id": "arrangement/2/location/1",
+              "@type": "trov:ArtifactLocation",
+              "trov:artifact": {
+                "@id": "composition/1/artifact/4"
+              },
+              "trov:path": "results.txt"
+            },
+            {
+              "@id": "arrangement/2/location/2",
+              "@type": "trov:ArtifactLocation",
+              "trov:artifact": {
+                "@id": "composition/1/artifact/1"
+              },
+              "trov:path": "download.sh"
+            },
+            {
+              "@id": "arrangement/2/location/3",
+              "@type": "trov:ArtifactLocation",
+              "trov:artifact": {
+                "@id": "composition/1/artifact/2"
+              },
+              "trov:path": "package.sh"
+            },
+            {
+              "@id": "arrangement/2/location/4",
+              "@type": "trov:ArtifactLocation",
+              "trov:artifact": {
+                "@id": "composition/1/artifact/3"
+              },
+              "trov:path": "data.csv"
+            }
+          ]
+        }
+      ],
+      "trov:hasAttribute": [],
+      "trov:hasComposition": {
+        "@id": "composition/1",
+        "@type": "trov:ArtifactComposition",
+        "trov:hasArtifact": [
+          {
+            "@id": "composition/1/artifact/0",
+            "@type": "trov:ResearchArtifact",
+            "trov:hash": {
+              "trov:hashAlgorithm": "sha256",
+              "trov:hashValue": "ffe9f27a3ac545590f5f477bb25c98cc460b7424771749d5d12f9fd40fef4bba"
+            },
+            "trov:mimeType": "text/plain"
+          },
+          {
+            "@id": "composition/1/artifact/1",
+            "@type": "trov:ResearchArtifact",
+            "trov:hash": {
+              "trov:hashAlgorithm": "sha256",
+              "trov:hashValue": "fed3c1ea9f9cd6bbe91287c488ccd78c3fa5117b745cff3af8b8b3247f4a16a6"
+            },
+            "trov:mimeType": "text/plain"
+          },
+          {
+            "@id": "composition/1/artifact/2",
+            "@type": "trov:ResearchArtifact",
+            "trov:hash": {
+              "trov:hashAlgorithm": "sha256",
+              "trov:hashValue": "9ecbbe5552e04010a48a2994b469de18471844b17819a9f4a323352ae392c8e7"
+            },
+            "trov:mimeType": "text/plain"
+          },
+          {
+            "@id": "composition/1/artifact/3",
+            "@type": "trov:ResearchArtifact",
+            "trov:hash": {
+              "trov:hashAlgorithm": "sha256",
+              "trov:hashValue": "492d5ea496056f1a6a6592241032fab764c321596317930b4fa0e1e8bc3b7470"
+            },
+            "trov:mimeType": "text/plain"
+          },
+          {
+            "@id": "composition/1/artifact/4",
+            "@type": "trov:ResearchArtifact",
+            "trov:hash": {
+              "trov:hashAlgorithm": "sha256",
+              "trov:hashValue": "d718c69bf056c71d099bab22bd9c3cc5f7ef13487351eb639b074bf147f7f7e4"
+            },
+            "trov:mimeType": "text/plain"
+          }
+        ],
+        "trov:hasFingerprint": {
+          "@id": "fingerprint",
+          "@type": "trov:CompositionFingerprint",
+          "trov:hash": {
+            "trov:hashAlgorithm": "sha256",
+            "trov:hashValue": "678d841030b22c1e4f76042392d2217d6751883b9c06e8af63d6a95bf5108196"
+          }
+        }
+      },
+      "trov:hasPerformance": [
+        {
+          "@id": "trp/0",
+          "@type": "trov:TrustedResearchPerformance",
+          "rdfs:comment": "Download data.csv",
+          "trov:accessedArrangement": {
+            "@id": "trp/0/binding/0",
+            "@type": "trov:ArrangementBinding",
+            "trov:arrangement": {
+              "@id": "arrangement/0"
+            }
+          },
+          "trov:contributedToArrangement": {
+            "@id": "trp/0/binding/1",
+            "@type": "trov:ArrangementBinding",
+            "trov:arrangement": {
+              "@id": "arrangement/1"
+            }
+          },
+          "trov:endedAtTime": "2026-10-03T09:05:00",
+          "trov:hasPerformanceAttribute": [
+            {
+              "@id": "trp/0/attribute/0",
+              "@type": "trov:InternetAccessRecording",
+              "trov:warrantedBy": {
+                "@id": "trs/capability/1"
+              }
+            }
+          ],
+          "trov:startedAtTime": "2026-10-03T09:00:00",
+          "trov:wasConductedBy": {
+            "@id": "trs"
+          }
+        },
+        {
+          "@id": "trp/1",
+          "@type": "trov:TrustedResearchPerformance",
+          "rdfs:comment": "Analyze data.csv",
+          "trov:accessedArrangement": {
+            "@id": "trp/1/binding/0",
+            "@type": "trov:ArrangementBinding",
+            "trov:arrangement": {
+              "@id": "arrangement/1"
+            }
+          },
+          "trov:contributedToArrangement": {
+            "@id": "trp/1/binding/1",
+            "@type": "trov:ArrangementBinding",
+            "trov:arrangement": {
+              "@id": "arrangement/2"
+            }
+          },
+          "trov:endedAtTime": "2026-10-03T10:00:00",
+          "trov:hasPerformanceAttribute": [
+            {
+              "@id": "trp/1/attribute/0",
+              "@type": "trov:InternetIsolation",
+              "trov:warrantedBy": {
+                "@id": "trs/capability/2"
+              }
+            }
+          ],
+          "trov:startedAtTime": "2026-10-03T09:10:00",
+          "trov:wasConductedBy": {
+            "@id": "trs"
+          }
+        }
+      ],
+      "trov:vocabularyVersion": "0.1",
+      "trov:wasAssembledBy": {
+        "@id": "trs",
+        "@type": [
+          "trov:TrustedResearchSystem",
+          "schema:Organization"
+        ],
+        "rdfs:comment": "TRS that can monitor network accesses or provide Internet isolation",
+        "trov:contact": "root@dev.null",
+        "trov:description": "My local system",
+        "trov:hasCapability": [
+          {
+            "@id": "trs/capability/1",
+            "@type": "trov:CanRecordInternetAccess"
+          },
+          {
+            "@id": "trs/capability/2",
+            "@type": "trov:CanProvideInternetIsolation"
+          }
+        ],
+        "trov:name": "shakuras",
+        "trov:owner": "Kacper Kowalik",
+        "trov:url": "http://127.0.0.1/"
+      }
+    }
+  ]
+}
