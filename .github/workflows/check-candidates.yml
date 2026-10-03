@@ -42,10 +42,12 @@ jobs:
           fi
 
       - name: Check the candidates
+        id: check
         run: make build-reports REPRO_INTERACTIVE_SESSION=false
 
+      # Shown and attached only where the checks ran: otherwise reports/ holds the committed reports.
       - name: Show the reports
-        if: always()
+        if: always() && steps.check.outcome != 'skipped'
         run: |
           {
             if ! git diff --quiet -- reports; then
@@ -63,7 +65,7 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Attach the reports
-        if: always()
+        if: always() && steps.check.outcome != 'skipped'
         uses: actions/upload-artifact@v4
         with:
           name: reports
