@@ -23,9 +23,12 @@ jobs:
           # The Dockerfile is compared with the commit before the push.
           fetch-depth: 0
 
-      # The image runs as a user that cannot otherwise write to the runner's checkout.
+      # The image runs as a user that cannot otherwise write to the runner's checkout, including the
+      # directories the Makefile creates for each session.
       - name: Let the image write the reports
-        run: chmod -R a+rwX .
+        run: |
+          mkdir -p .repro-logs .repro-sessions/active
+          chmod -R a+rwX .
 
       - name: Log in to ghcr.io
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
@@ -41,9 +44,12 @@ jobs:
             make pull-image
           fi
 
+      # Git in the image refuses a checkout owned by another user unless told to trust it.
       - name: Check the candidates
         id: check
-        run: make build-reports REPRO_INTERACTIVE_SESSION=false
+        run: |
+          make build-reports REPRO_INTERACTIVE_SESSION=false \
+              REPRO_DOCKER_OPTIONS="--env GIT_CONFIG_COUNT=1 --env GIT_CONFIG_KEY_0=safe.directory --env 'GIT_CONFIG_VALUE_0=*'"
 
       # Shown and attached only where the checks ran: otherwise reports/ holds the committed reports.
       - name: Show the reports
