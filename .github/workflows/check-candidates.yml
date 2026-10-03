@@ -1,0 +1,70 @@
+# Check the candidates as pushed, and show the reports on the run's page.
+#
+# The reports are shown, and attached to the run, but never committed: a push that edits or adds a
+# candidate gets its reports here without committing them. The run fails only if the checks cannot run.
+
+name: Check candidates
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # The Dockerfile is compared with the commit before the push.
+          fetch-depth: 0
+
+      # The image runs as a user that cannot otherwise write to the runner's checkout.
+      - name: Let the image write the reports
+        run: chmod -R a+rwX .
+
+      - name: Log in to ghcr.io
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+
+      # Build the image where this push changed the Dockerfile; otherwise use the published one.
+      - name: Get the image
+        run: |
+          before="${{ github.event.before }}"
+          if [ -n "$before" ] && git cat-file -e "$before" 2>/dev/null \
+              && ! git diff --quiet "$before" "${{ github.sha }}" -- Dockerfile; then
+            make build-image
+          else
+            make pull-image
+          fi
+
+      - name: Check the candidates
+        run: make build-reports REPRO_INTERACTIVE_SESSION=false
+
+      - name: Show the reports
+        if: always()
+        run: |
+          {
+            if ! git diff --quiet -- reports; then
+              echo "> These reports differ from the ones committed, which are for the candidates as last committed with their reports."
+              echo
+            fi
+            cat reports/README.md
+            for report in reports/*.md; do
+              [ "$report" = reports/README.md ] && continue
+              echo
+              echo "---"
+              echo
+              cat "$report"
+            done
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Attach the reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reports
+          path: reports/
