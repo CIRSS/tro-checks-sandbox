@@ -88,7 +88,7 @@ The sections below give the status of each tier, then the status of each expecta
 <tr><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
 <tr><td nowrap><samp>context-and-nonempty-graph-present</samp></td><td>The file has a non-null <code>@context</code> and an <code>@graph</code> holding at least one node</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>core-prefixes-pinned</samp></td><td><code>trov</code> is declared and is the only prefix for a TROV namespace; <code>rdf</code>, <code>rdfs</code> and <code>schema</code> prefixes, if declared, are the standard ones</td><td>✅&nbsp;met</td></tr>
-<tr><td nowrap><a href="#unmet-expectation-trov-terms-known"><samp>trov-terms-known</samp></a></td><td>Every <code>trov:</code> name is one TROV defines</td><td>❌&nbsp;not&nbsp;met</td></tr>
+<tr><td nowrap><a href="#unmet-expectation-trov-terms-known"><samp>trov-terms-known</samp></a></td><td>Every term with the <code>trov:</code> prefix is one TROV defines</td><td>❌&nbsp;not&nbsp;met</td></tr>
 <tr><td nowrap><samp>trov-version-known</samp></td><td>The TRO declares, in <code>trov:vocabularyVersion</code>, a known version of TROV</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>hash-algorithms-permitted</samp></td><td>Every hash names an algorithm TRACE permits: a collision-resistant digest from the SHA-2, SHA-3 or BLAKE families</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>hash-values-correct-form</samp></td><td>Every hash value is lowercase hexadecimal of the length its algorithm produces</td><td>✅&nbsp;met</td></tr>
@@ -145,14 +145,37 @@ Detailed expectation: Where a property name or a string value carries the trov: 
 
 Defined in version: `0.1`
 
-Expectation unmet in 1 place:
+Expectation unmet in 5 places:
 
 <table>
 <tbody>
-<tr><th align="left">Rule</th><td>a trov: name is a term TROV defines</td></tr>
-<tr><th align="left">Problem</th><td><code>trov:wasAssembledBy</code> was expected to be one of ["trov:ArrangementBinding","trov:ArtifactArrangement","trov:ArtifactCollection","trov:ArtifactComposition","trov:ArtifactLocation","trov:CanDetectInternetAccess","trov:CanEnforceCapabilitiesTechnically","trov:CanEnforceInternetIsolation","trov:CanEnsureCodeIncludedInTROPackage","trov:CanEnsureInputDataIncludedInTROPackage","trov:CanEnsureInputDataPersistsAfterRun","trov:CanEnsureOutputDataIncludedInTROPackage","trov:CanExcludeInputs","trov:CanExcludeOutputs","trov:CanIsolateEnvironment","trov:CanPreventAuthorIntervention","trov:CanPreventUserInteractionDuringRun","trov:CanProvideInternetIsolation","trov:CanRecordInternetAccess","trov:CanRecordSoftwareEnvironment","trov:CanRequireInputDataExistsBeforeRun","trov:CanRequireInputDataLocalBeforeRun","trov:CompositionFingerprint","trov:GPGSigning","trov:IncludesAllInputData","trov:InternetAccessRecording","trov:InternetIsolation","trov:ResearchArtifact","trov:SigningMechanism","trov:TREAttribute","trov:TROAttribute","trov:TRPAttribute","trov:TRPAttributeType","trov:TRSAttribute","trov:TRSCapability","trov:TRSCapabilityType","trov:TRSPolicy","trov:TimeStampingAuthority","trov:TransparentResearchObject","trov:TrustedResearchElement","trov:TrustedResearchPerformance","trov:TrustedResearchSystem","trov:X509CMSSigning","trov:accessedArrangement","trov:arrangement","trov:artifact","trov:boundTo","trov:contributedToArrangement","trov:createdWith","trov:customTerm","trov:endedAtTime","trov:hasArrangement","trov:hasArtifact","trov:hasArtifactLocation","trov:hasAttribute","trov:hasCapability","trov:hasComposition","trov:hasFingerprint","trov:hasPerformance","trov:hasPerformanceAttribute","trov:hasPolicy","trov:hash","trov:hashAlgorithm","trov:hashValue","trov:mimeType","trov:path","trov:publicKey","trov:signingMechanism","trov:startedAtTime","trov:vocabularyVersion","trov:warrantedBy","trov:wasAssembledBy","trov:wasConductedBy","trov:wasTimestampedBy"]</td></tr>
-<tr><th align="left">Found</th><td><code>{"@id":"trs","@type":["trov:TrustedResearchSystem","schema:Organization"],"rdfs:comment":"TRS that can monitor network accesses or provide Internet isolation","trov:contact":"root@dev.null","trov:description":"My local system","trov:hasCapability":[{"@id":"trs/capability/1","@type":"trov:CanRecordInternetAccess"},{"@id":"trs/capability/2","@type":"trov:CanProvideInternetIsolation"}],"trov:name":"shakuras","trov:owner":"Kacper Kowalik","trov:publicKey":"-----BEGIN PGP PUBLIC KEY BLOCK-----\n\nmDMEasAG6xYJKwYBBAHaRw8BAQdArSIzDL65IdMOIz97Is0rskQRq/cD/qeSwPe9\nxu2VuTO0LHRyby11dGlscy1jaGVja3MgdGVzdCBrZXkgPHRlc3RAZXhhbXBsZS5v\ncmc+iJAEExYKADgWIQQIU5Ljw6r8UZ4gjmsnUOertT5SLAUCasAG6wIbAwULCQgH\nAgYVCgkICwIEFgIDAQIeAQIXgAAKCRAnUOertT5SLNeoAP9b6MOx2hTU2cx0lXM9\ng9/bg5NgKtNHVgKiHI6UKjpe2wD/e9DksgM5kklSvFNI6JUCxpMegzsOe6IfMLE1\nrB5w7AU=\n=CsGj\n-----END PGP PUBLIC KEY BLOCK-----\n","trov:url":"http://127.0.0.1/"}</code></td></tr>
-<tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:wasAssembledBy</samp></td></tr>
+<tr><th align="left">Rule</th><td>a term with the trov: prefix is one TROV defines</td></tr>
+<tr><th align="left">Problem</th><td><code>trov:contact</code> is not one of the 74 allowed values</td></tr>
+<tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:wasAssembledBy/<wbr>trov:contact</samp></td></tr>
+</tbody>
+<tbody><tr><td colspan="2">&nbsp;</td></tr></tbody>
+<tbody>
+<tr><th align="left">Rule</th><td>a term with the trov: prefix is one TROV defines</td></tr>
+<tr><th align="left">Problem</th><td><code>trov:description</code> is not one of the 74 allowed values</td></tr>
+<tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:wasAssembledBy/<wbr>trov:description</samp></td></tr>
+</tbody>
+<tbody><tr><td colspan="2">&nbsp;</td></tr></tbody>
+<tbody>
+<tr><th align="left">Rule</th><td>a term with the trov: prefix is one TROV defines</td></tr>
+<tr><th align="left">Problem</th><td><code>trov:name</code> is not one of the 74 allowed values</td></tr>
+<tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:wasAssembledBy/<wbr>trov:name</samp></td></tr>
+</tbody>
+<tbody><tr><td colspan="2">&nbsp;</td></tr></tbody>
+<tbody>
+<tr><th align="left">Rule</th><td>a term with the trov: prefix is one TROV defines</td></tr>
+<tr><th align="left">Problem</th><td><code>trov:owner</code> is not one of the 74 allowed values</td></tr>
+<tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:wasAssembledBy/<wbr>trov:owner</samp></td></tr>
+</tbody>
+<tbody><tr><td colspan="2">&nbsp;</td></tr></tbody>
+<tbody>
+<tr><th align="left">Rule</th><td>a term with the trov: prefix is one TROV defines</td></tr>
+<tr><th align="left">Problem</th><td><code>trov:url</code> is not one of the 74 allowed values</td></tr>
+<tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:wasAssembledBy/<wbr>trov:url</samp></td></tr>
 </tbody>
 </table>
 
