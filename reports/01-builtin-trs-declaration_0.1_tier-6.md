@@ -1,8 +1,8 @@
-# Report on `01-builtin-trs-declaration.jsonld`
+# Report on `01-builtin-trs-declaration.jsonld` at version `0.1`
 
 This report was written by `tro-checks`, which checks a TRO declaration against the requirements of the TRACE Specification.
 
-Made by tro-utils with no TRS declaration given, so it uses the minimal TRS declaration built into tro-utils, which has no capabilities and no public key. Describes one performance: an analysis of a data file; and two arrangements. Claims no attributes.
+Made by `tro-utils` with no TRS declaration given, so it uses the minimal TRS declaration built into `tro-utils`, which has no capabilities and no public key. Describes one performance: an analysis of a data file; and two arrangements. Claims no attributes.
 
 This candidate is expected to satisfy [`Tier 6 - STANDALONE-TRO`](#tier-6-standalone-tro) at version `0.1`. The candidate does not meet three of the expectations: two in [`Tier 4 - USES-TROV-CORRECTLY`](#tier-4-uses-trov-correctly) and one in [`Tier 5 - DEFINES-TRS`](#tier-5-defines-trs).
 
@@ -16,7 +16,8 @@ The sections below give the status of each tier, then the status of each expecta
 </thead>
 <tbody>
 <tr><td>Candidate</td><td nowrap><samp>01-builtin-trs-declaration.jsonld</samp></td><td></td></tr>
-<tr><td>Description</td><td>Made by tro-utils with no TRS declaration given, so it uses the minimal TRS declaration built into tro-utils, which has no capabilities and no public key. Describes one performance: an analysis of a data file; and two arrangements. Claims no attributes.</td><td>the candidate manifest</td></tr>
+<tr><td>Created&nbsp;with</td><td><code>tro-utils 0.4.6</code></td><td>the candidate</td></tr>
+<tr><td>Description</td><td>Made by <code>tro-utils</code> with no TRS declaration given, so it uses the minimal TRS declaration built into <code>tro-utils</code>, which has no capabilities and no public key. Describes one performance: an analysis of a data file; and two arrangements. Claims no attributes.</td><td>the candidate manifest</td></tr>
 <tr><td>Target&nbsp;version</td><td><samp>0.1</samp></td><td>the candidate manifest</td></tr>
 <tr><td>Target&nbsp;tier</td><td><samp>Tier&nbsp;6&nbsp;&#8209;&nbsp;STANDALONE&#8209;TRO</samp></td><td>the candidate manifest</td></tr>
 </tbody>
@@ -137,7 +138,11 @@ The sections below give the status of each tier, then the status of each expecta
 </tbody>
 </table>
 
+<a id="diagnostics"></a>
+
 ## Diagnostics for Each Unmet Expectation
+
+<a id="unmet-expectation-times-zoned"></a>
 
 ### Unmet expectation: times-zoned
 
@@ -163,6 +168,8 @@ Expectation unmet in 2 places:
 </tbody>
 </table>
 
+<a id="unmet-expectation-creators-person-or-organization"></a>
+
 ### Unmet expectation: creators-person-or-organization
 
 Detailed expectation: Where the TRO carries schema:creator, each value is a node -- an object, not a string -- and where the node carries a @type, it is schema:Person or schema:Organization, the types schema.org expects of a creator. A bare reference, an object holding only an @id, passes.
@@ -179,6 +186,8 @@ Expectation unmet in 1 place:
 <tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>schema:creator</samp></td></tr>
 </tbody>
 </table>
+
+<a id="unmet-expectation-trs-id-absolute"></a>
 
 ### Unmet expectation: trs-id-absolute
 

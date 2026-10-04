@@ -1,8 +1,8 @@
-# Report on `03-readme-trs-declaration-signed.jsonld`
+# Report on `03-readme-trs-declaration-signed.jsonld` at version `trace-spec-2026-04-19`
 
 This report was written by `tro-checks`, which checks a TRO declaration against the requirements of the TRACE Specification.
 
-Made by tro-utils with readme-trs-declaration.jsonld representing a TRS that can record internet access and provide internet isolation and is accompanied by a signing key pair, trs-key.asc, whose public key the TRS carries. Signed with that key pair. Describes three performances: a download of a data file, an analysis of it, and a packaging of the scripts and results; and four arrangements. The download claims its internet access was recorded; the analysis and the packaging claim they were isolated from the internet.
+Made by `tro-utils` with `readme-trs-declaration.jsonld` representing a TRS that can record internet access and provide internet isolation and is accompanied by a signing key pair, `trs-key.asc`, whose public key the TRS carries. Signed with that key pair. Describes three performances: a download of a data file, an analysis of it, and a packaging of the scripts and results; and four arrangements. The download claims its internet access was recorded; the analysis and the packaging claim they were isolated from the internet.
 
 This candidate is expected to satisfy [`Tier 6 - STANDALONE-TRO`](#tier-6-standalone-tro) at version `trace-spec-2026-04-19`. The candidate meets every expectation in that tier and in the five tiers below it.
 
@@ -16,7 +16,8 @@ The sections below give the status of each tier, then the status of each expecta
 </thead>
 <tbody>
 <tr><td>Candidate</td><td nowrap><samp>03-readme-trs-declaration-signed.jsonld</samp></td><td></td></tr>
-<tr><td>Description</td><td>Made by tro-utils with readme-trs-declaration.jsonld representing a TRS that can record internet access and provide internet isolation and is accompanied by a signing key pair, trs-key.asc, whose public key the TRS carries. Signed with that key pair. Describes three performances: a download of a data file, an analysis of it, and a packaging of the scripts and results; and four arrangements. The download claims its internet access was recorded; the analysis and the packaging claim they were isolated from the internet.</td><td>the candidate manifest</td></tr>
+<tr><td>Created&nbsp;with</td><td><code>tro-utils 0.4.6</code></td><td>the candidate</td></tr>
+<tr><td>Description</td><td>Made by <code>tro-utils</code> with <code>readme-trs-declaration.jsonld</code> representing a TRS that can record internet access and provide internet isolation and is accompanied by a signing key pair, <code>trs-key.asc</code>, whose public key the TRS carries. Signed with that key pair. Describes three performances: a download of a data file, an analysis of it, and a packaging of the scripts and results; and four arrangements. The download claims its internet access was recorded; the analysis and the packaging claim they were isolated from the internet.</td><td>the candidate manifest</td></tr>
 <tr><td>Target&nbsp;version</td><td><samp>trace&#8209;spec&#8209;2026&#8209;04&#8209;19</samp></td><td>the candidate manifest</td></tr>
 <tr><td>Target&nbsp;tier</td><td><samp>Tier&nbsp;6&nbsp;&#8209;&nbsp;STANDALONE&#8209;TRO</samp></td><td>the candidate manifest</td></tr>
 </tbody>

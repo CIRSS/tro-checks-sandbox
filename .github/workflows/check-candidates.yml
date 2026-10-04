@@ -60,14 +60,7 @@ jobs:
               echo "> These reports differ from the ones committed, which are for the candidates as last committed with their reports."
               echo
             fi
-            cat reports/README.md
-            for report in reports/*.md; do
-              [ "$report" = reports/README.md ] && continue
-              echo
-              echo "---"
-              echo
-              cat "$report"
-            done
+            cat reports/integrated-report.md
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Attach the reports
