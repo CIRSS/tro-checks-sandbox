@@ -1,10 +1,10 @@
-# Report on `02-readme-trs-declaration.jsonld` at version `0.1`
+# Report on `02-readme-trs-declaration.jsonld` at version `trace-0.1`
 
 This report was written by `tro-checks`, which checks a TRO declaration against the requirements of the TRACE Specification.
 
 Made by `tro-utils` with `readme-trs-declaration.jsonld` representing a TRS that can record internet access and provide internet isolation. Describes two performances: a download of a data file and an analysis of it; and three arrangements. The download claims its internet access was recorded; the analysis claims it was isolated from the internet.
 
-This candidate is expected to satisfy [`Tier 6 - STANDALONE-TRO`](#tier-6-standalone-tro) at version `0.1`. The candidate does not meet six of the expectations: three in [`Tier 4 - USES-TROV-CORRECTLY`](#tier-4-uses-trov-correctly), two in [`Tier 5 - DEFINES-TRS`](#tier-5-defines-trs) and one in [`Tier 6 - STANDALONE-TRO`](#tier-6-standalone-tro).
+This candidate is expected to satisfy [`Tier 6 - STANDALONE-TRO`](#tier-6-standalone-tro) at version `trace-0.1`. The candidate does not meet six of the expectations: three in [`Tier 4 - USES-TROV-CORRECTLY`](#tier-4-uses-trov-correctly), two in [`Tier 5 - DEFINES-TRS`](#tier-5-defines-trs) and one in [`Tier 6 - STANDALONE-TRO`](#tier-6-standalone-tro).
 
 The sections below give the status of each tier, then the status of each expectation, then, for each expectation not met, what was found, where in the candidate, and why it does not meet the expectation.
 
@@ -18,7 +18,7 @@ The sections below give the status of each tier, then the status of each expecta
 <tr><td>Candidate</td><td nowrap><samp>02-readme-trs-declaration.jsonld</samp></td><td></td></tr>
 <tr><td>Created&nbsp;with</td><td><code>tro-utils 0.4.6</code></td><td>the candidate</td></tr>
 <tr><td>Description</td><td>Made by <code>tro-utils</code> with <code>readme-trs-declaration.jsonld</code> representing a TRS that can record internet access and provide internet isolation. Describes two performances: a download of a data file and an analysis of it; and three arrangements. The download claims its internet access was recorded; the analysis claims it was isolated from the internet.</td><td>the candidate manifest</td></tr>
-<tr><td>Target&nbsp;version</td><td><samp>0.1</samp></td><td>the candidate manifest</td></tr>
+<tr><td>Target&nbsp;version</td><td><samp>trace&#8209;0.1</samp></td><td>the candidate manifest</td></tr>
 <tr><td>Target&nbsp;tier</td><td><samp>Tier&nbsp;6&nbsp;&#8209;&nbsp;STANDALONE&#8209;TRO</samp></td><td>the candidate manifest</td></tr>
 </tbody>
 </table>
@@ -148,7 +148,7 @@ The sections below give the status of each tier, then the status of each expecta
 
 Detailed expectation: Where a property name or a string value carries the trov: prefix, it is a term TROV defines.
 
-Defined in version: `0.1`
+Defined in version: `trace-0.1`
 
 Expectation unmet in 5 places:
 
@@ -190,7 +190,7 @@ Expectation unmet in 5 places:
 
 Detailed expectation: Every trov:startedAtTime and trov:endedAtTime carries its time zone: Z, or an offset of the form +hh:mm or -hh:mm.
 
-Defined in version: `0.1`
+Defined in version: `trace-0.1`
 
 Expectation unmet in 4 places:
 
@@ -230,7 +230,7 @@ Expectation unmet in 4 places:
 
 Detailed expectation: Where the TRO carries schema:creator, each value is a node -- an object, not a string -- and where the node carries a @type, it is schema:Person or schema:Organization, the types schema.org expects of a creator. A bare reference, an object holding only an @id, passes.
 
-Defined in version: `0.1`
+Defined in version: `trace-0.1`
 
 Expectation unmet in 1 place:
 
@@ -249,7 +249,7 @@ Expectation unmet in 1 place:
 
 Detailed expectation: The @id of the TRS the document defines is an absolute IRI, or a compact IRI whose prefix is not trov, so that it is the same wherever the TRS is defined.
 
-Defined in version: `0.1`
+Defined in version: `trace-0.1`
 
 Expectation unmet in 1 place:
 
@@ -268,7 +268,7 @@ Expectation unmet in 1 place:
 
 Detailed expectation: Every value of trov:hasCapability that carries an @id carries an absolute IRI, or a compact IRI whose prefix is not trov.
 
-Defined in version: `0.1`
+Defined in version: `trace-0.1`
 
 Expectation unmet in 2 places:
 
@@ -294,7 +294,7 @@ Expectation unmet in 2 places:
 
 Detailed expectation: Every trov:warrantedBy on a value of trov:hasPerformanceAttribute refers to its capability by an absolute IRI, or a compact IRI whose prefix is not trov.
 
-Defined in version: `0.1`
+Defined in version: `trace-0.1`
 
 Expectation unmet in 2 places:
 

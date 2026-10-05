@@ -1,10 +1,10 @@
-# Report on `02-readme-trs-declaration.jsonld` at version `trace-spec-2026-04-19`
+# Report on `02-readme-trs-declaration.jsonld` at version `trace-2026-04-19`
 
 This report was written by `tro-checks`, which checks a TRO declaration against the requirements of the TRACE Specification.
 
 Made by `tro-utils` with `readme-trs-declaration.jsonld` representing a TRS that can record internet access and provide internet isolation. Describes two performances: a download of a data file and an analysis of it; and three arrangements. The download claims its internet access was recorded; the analysis claims it was isolated from the internet.
 
-This candidate is expected to satisfy [`Tier 6 - STANDALONE-TRO`](#tier-6-standalone-tro) at version `trace-spec-2026-04-19`. The candidate meets every expectation in that tier and in the five tiers below it.
+This candidate is expected to satisfy [`Tier 6 - STANDALONE-TRO`](#tier-6-standalone-tro) at version `trace-2026-04-19`. The candidate meets every expectation in that tier and in the five tiers below it.
 
 The sections below give the status of each tier, then the status of each expectation.
 
@@ -18,7 +18,7 @@ The sections below give the status of each tier, then the status of each expecta
 <tr><td>Candidate</td><td nowrap><samp>02-readme-trs-declaration.jsonld</samp></td><td></td></tr>
 <tr><td>Created&nbsp;with</td><td><code>tro-utils 0.4.6</code></td><td>the candidate</td></tr>
 <tr><td>Description</td><td>Made by <code>tro-utils</code> with <code>readme-trs-declaration.jsonld</code> representing a TRS that can record internet access and provide internet isolation. Describes two performances: a download of a data file and an analysis of it; and three arrangements. The download claims its internet access was recorded; the analysis claims it was isolated from the internet.</td><td>the candidate manifest</td></tr>
-<tr><td>Target&nbsp;version</td><td><samp>trace&#8209;spec&#8209;2026&#8209;04&#8209;19</samp></td><td>the candidate manifest</td></tr>
+<tr><td>Target&nbsp;version</td><td><samp>trace&#8209;2026&#8209;04&#8209;19</samp></td><td>the candidate manifest</td></tr>
 <tr><td>Target&nbsp;tier</td><td><samp>Tier&nbsp;6&nbsp;&#8209;&nbsp;STANDALONE&#8209;TRO</samp></td><td>the candidate manifest</td></tr>
 </tbody>
 </table>
