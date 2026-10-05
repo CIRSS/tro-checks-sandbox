@@ -35,7 +35,7 @@ This candidate is expected to satisfy [`Tier 6 - STANDALONE-TRO`](#01-builtin-tr
 
 The sections below give the status of each tier, then the status of each expectation.
 
-### Candidate Information
+### Report 1 of 6: Candidate Information
 
 <table>
 <thead>
@@ -50,7 +50,7 @@ The sections below give the status of each tier, then the status of each expecta
 </tbody>
 </table>
 
-### Tier Assessments
+### Report 1 of 6: Tier Assessments
 
 <table>
 <thead>
@@ -67,7 +67,7 @@ The sections below give the status of each tier, then the status of each expecta
 </tbody>
 </table>
 
-### Expectation Findings by Tier
+### Report 1 of 6: Expectation Findings by Tier
 
 <table>
 <tbody>
@@ -174,7 +174,7 @@ This candidate is expected to satisfy [`Tier 6 - STANDALONE-TRO`](#01-builtin-tr
 
 The sections below give the status of each tier, then the status of each expectation, then, for each expectation not met, what was found, where in the candidate, and why it does not meet the expectation.
 
-### Candidate Information
+### Report 2 of 6: Candidate Information
 
 <table>
 <thead>
@@ -189,7 +189,7 @@ The sections below give the status of each tier, then the status of each expecta
 </tbody>
 </table>
 
-### Tier Assessments
+### Report 2 of 6: Tier Assessments
 
 <table>
 <thead>
@@ -206,7 +206,7 @@ The sections below give the status of each tier, then the status of each expecta
 </tbody>
 </table>
 
-### Expectation Findings by Tier
+### Report 2 of 6: Expectation Findings by Tier
 
 <table>
 <tbody>
@@ -306,7 +306,7 @@ The sections below give the status of each tier, then the status of each expecta
 
 <a id="01-builtin-trs-declaration_0.1_tier-6--diagnostics"></a>
 
-### Diagnostics for Each Unmet Expectation
+### Report 2 of 6: Diagnostics for the 3 Unmet Expectations
 
 <a id="01-builtin-trs-declaration_0.1_tier-6--unmet-expectation-times-zoned"></a>
 
@@ -386,7 +386,7 @@ This candidate is expected to satisfy [`Tier 6 - STANDALONE-TRO`](#02-readme-trs
 
 The sections below give the status of each tier, then the status of each expectation.
 
-### Candidate Information
+### Report 3 of 6: Candidate Information
 
 <table>
 <thead>
@@ -401,7 +401,7 @@ The sections below give the status of each tier, then the status of each expecta
 </tbody>
 </table>
 
-### Tier Assessments
+### Report 3 of 6: Tier Assessments
 
 <table>
 <thead>
@@ -418,7 +418,7 @@ The sections below give the status of each tier, then the status of each expecta
 </tbody>
 </table>
 
-### Expectation Findings by Tier
+### Report 3 of 6: Expectation Findings by Tier
 
 <table>
 <tbody>
@@ -525,7 +525,7 @@ This candidate is expected to satisfy [`Tier 6 - STANDALONE-TRO`](#02-readme-trs
 
 The sections below give the status of each tier, then the status of each expectation, then, for each expectation not met, what was found, where in the candidate, and why it does not meet the expectation.
 
-### Candidate Information
+### Report 4 of 6: Candidate Information
 
 <table>
 <thead>
@@ -540,7 +540,7 @@ The sections below give the status of each tier, then the status of each expecta
 </tbody>
 </table>
 
-### Tier Assessments
+### Report 4 of 6: Tier Assessments
 
 <table>
 <thead>
@@ -557,7 +557,7 @@ The sections below give the status of each tier, then the status of each expecta
 </tbody>
 </table>
 
-### Expectation Findings by Tier
+### Report 4 of 6: Expectation Findings by Tier
 
 <table>
 <tbody>
@@ -657,7 +657,7 @@ The sections below give the status of each tier, then the status of each expecta
 
 <a id="02-readme-trs-declaration_0.1_tier-6--diagnostics"></a>
 
-### Diagnostics for Each Unmet Expectation
+### Report 4 of 6: Diagnostics for the 6 Unmet Expectations
 
 <a id="02-readme-trs-declaration_0.1_tier-6--unmet-expectation-trov-terms-known"></a>
 
@@ -845,7 +845,7 @@ This candidate is expected to satisfy [`Tier 6 - STANDALONE-TRO`](#03-readme-trs
 
 The sections below give the status of each tier, then the status of each expectation.
 
-### Candidate Information
+### Report 5 of 6: Candidate Information
 
 <table>
 <thead>
@@ -860,7 +860,7 @@ The sections below give the status of each tier, then the status of each expecta
 </tbody>
 </table>
 
-### Tier Assessments
+### Report 5 of 6: Tier Assessments
 
 <table>
 <thead>
@@ -877,7 +877,7 @@ The sections below give the status of each tier, then the status of each expecta
 </tbody>
 </table>
 
-### Expectation Findings by Tier
+### Report 5 of 6: Expectation Findings by Tier
 
 <table>
 <tbody>
@@ -984,7 +984,7 @@ This candidate is expected to satisfy [`Tier 6 - STANDALONE-TRO`](#03-readme-trs
 
 The sections below give the status of each tier, then the status of each expectation, then, for each expectation not met, what was found, where in the candidate, and why it does not meet the expectation.
 
-### Candidate Information
+### Report 6 of 6: Candidate Information
 
 <table>
 <thead>
@@ -999,7 +999,7 @@ The sections below give the status of each tier, then the status of each expecta
 </tbody>
 </table>
 
-### Tier Assessments
+### Report 6 of 6: Tier Assessments
 
 <table>
 <thead>
@@ -1016,7 +1016,7 @@ The sections below give the status of each tier, then the status of each expecta
 </tbody>
 </table>
 
-### Expectation Findings by Tier
+### Report 6 of 6: Expectation Findings by Tier
 
 <table>
 <tbody>
@@ -1116,7 +1116,7 @@ The sections below give the status of each tier, then the status of each expecta
 
 <a id="03-readme-trs-declaration-signed_0.1_tier-6--diagnostics"></a>
 
-### Diagnostics for Each Unmet Expectation
+### Report 6 of 6: Diagnostics for the 6 Unmet Expectations
 
 <a id="03-readme-trs-declaration-signed_0.1_tier-6--unmet-expectation-trov-terms-known"></a>
 

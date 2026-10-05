@@ -140,7 +140,7 @@ The sections below give the status of each tier, then the status of each expecta
 
 <a id="diagnostics"></a>
 
-## Diagnostics for Each Unmet Expectation
+## Diagnostics for the 6 Unmet Expectations
 
 <a id="unmet-expectation-trov-terms-known"></a>
 
