@@ -23,7 +23,7 @@
       "trov:createdWith": {
         "@type": "schema:SoftwareApplication",
         "schema:name": "tro-utils",
-        "schema:softwareVersion": "0.5.0"
+        "schema:softwareVersion": "0.2.3.dev4+gd511bf49a.d20260326"
       },
       "trov:hasArrangement": [
         {
@@ -134,7 +134,7 @@
               "trov:hashAlgorithm": "sha256",
               "trov:hashValue": "492d5ea496056f1a6a6592241032fab764c321596317930b4fa0e1e8bc3b7470"
             },
-            "trov:mimeType": "text/plain"
+            "trov:mimeType": "text/csv"
           },
           {
             "@id": "composition/1/artifact/2",
