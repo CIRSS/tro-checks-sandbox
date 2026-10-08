@@ -18,7 +18,7 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           # The Dockerfile is compared with the base the change is measured against.
           fetch-depth: 0
@@ -74,7 +74,7 @@ jobs:
 
       - name: Attach the reports
         if: always() && steps.check.outcome != 'skipped'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: reports
           path: reports/
