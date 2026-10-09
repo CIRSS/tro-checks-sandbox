@@ -1,7 +1,7 @@
 FROM cirss/repro-parent:latest
 
 # Link the image to its repository on GitHub.
-LABEL org.opencontainers.image.source=https://github.com/transparency-certified/tro-utils-checks
+LABEL org.opencontainers.image.source=https://github.com/CIRSS/tro-checks-sandbox
 
 # Install Python, for tro-utils and the jsonschema validator; libmagic, to name artifacts' types;
 # GnuPG, to sign; faketime, to fix the clock while candidates are made; xz-utils, to unpack Node.
