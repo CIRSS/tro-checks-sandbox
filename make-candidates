@@ -97,8 +97,9 @@ tro-utils --declaration "${declaration_03}" \
     --accessed arrangement/2 --modified arrangement/3 \
     --attribute trov:InternetIsolation
 
-# This TRO declaration is signed.
-tro-utils --declaration "${declaration_03}" \
+# This TRO declaration is signed. Only gpg sees the fixed time: the signature records it, while the
+# timestamp request needs the real time to trust the authority's certificate.
+FAKETIME_ONLY_CMDS=gpg tro-utils --declaration "${declaration_03}" \
     --gpg-fingerprint 085392E3C3AAFC519E208E6B2750E7ABB53E522C \
     --gpg-passphrase "$(cat ./resources/trs-key-passphrase)" \
     sign
