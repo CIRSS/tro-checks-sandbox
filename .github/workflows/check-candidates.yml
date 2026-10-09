@@ -1,4 +1,5 @@
-# Remake the candidates where this repository makes them, check them all, and show the reports.
+# Remake the candidates where this repository makes them, unless asked to check them as committed,
+# check them all, and show the reports.
 #
 # Started by hand only, on the branch chosen in the form. Commits the candidates and reports to that
 # branch only if asked. The run fails only if the checks could not run; how the candidates fared is in
@@ -9,6 +10,10 @@ name: Check the candidate declarations
 on:
   workflow_dispatch:
     inputs:
+      make-candidates:
+        description: Make the candidates first, where this repository makes them; untick to check them as committed
+        default: true
+        type: boolean
       commit:
         description: Commit the candidates and reports to this branch
         default: false
@@ -38,7 +43,9 @@ jobs:
       # Git in the image refuses a checkout owned by another user unless told to trust it.
       - name: Remake the candidates
         run: |
-          if grep -q '^build-candidates:' repro-config; then
+          if [ "${{ inputs.make-candidates }}" != true ]; then
+            echo "Asked to check the candidates as committed."
+          elif grep -q '^build-candidates:' repro-config; then
             make build-candidates REPRO_INTERACTIVE_SESSION=false \
                 REPRO_DOCKER_OPTIONS="--env GIT_CONFIG_COUNT=1 --env GIT_CONFIG_KEY_0=safe.directory --env 'GIT_CONFIG_VALUE_0=*'"
           else
@@ -80,5 +87,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- candidates reports
-          git commit -m "Remake the candidates and reports"
+          if [ "${{ inputs.make-candidates }}" = true ]; then
+            git commit -m "Remake the candidates and reports"
+          else
+            git commit -m "Check the candidates as committed and update the reports"
+          fi
           git push
