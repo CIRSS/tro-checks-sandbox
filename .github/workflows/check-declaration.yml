@@ -1,7 +1,7 @@
 # Check one declaration, pasted into the form, on its own: no signature, no other artifacts.
 #
-# Started by hand only. Shows the report on the run's page and commits nothing. The run fails only if
-# the declaration could not be checked; how it fared is in the report.
+# Started by hand only. Shows the report on the run's page, attaches it with the declaration, and commits
+# nothing. The run fails only if the declaration could not be checked; how it fared is in the report.
 
 name: Check a declaration
 
@@ -56,11 +56,24 @@ jobs:
               VERSION="$VERSION" TIER="$TIER" REPRO_INTERACTIVE_SESSION=false \
               REPRO_DOCKER_OPTIONS="--env GIT_CONFIG_COUNT=1 --env GIT_CONFIG_KEY_0=safe.directory --env 'GIT_CONFIG_VALUE_0=*'"
 
+      # The form's box shows little of a paste, so the start of what was checked heads the report.
       - name: Show the report
-        run: cat pasted/report.md >> "$GITHUB_STEP_SUMMARY"
+        run: |
+          {
+            echo "Checked this (first 200 characters):"
+            echo
+            echo '```'
+            head -c 200 pasted/declaration.jsonld
+            echo
+            echo '```'
+            echo
+            cat pasted/report.md
+          } >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Attach the report
+      - name: Attach the declaration and report
         uses: actions/upload-artifact@v4
         with:
-          name: report
-          path: pasted/report.md
+          name: declaration-and-report
+          path: |
+            pasted/declaration.jsonld
+            pasted/report.md
