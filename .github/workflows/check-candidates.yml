@@ -4,7 +4,7 @@
 # branch only if asked. The run fails only if the checks could not run; how the candidates fared is in
 # the reports.
 
-name: Check the candidates
+name: Check the candidate declarations
 
 on:
   workflow_dispatch:

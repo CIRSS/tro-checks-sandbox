@@ -1,9 +1,9 @@
-# Check one declaration, pasted into the form, on its own: no signature, no other artifacts.
+# Check one TRO declaration, pasted into the form, on its own: no signature, no other artifacts.
 #
 # Started by hand only. Shows the report on the run's page, attaches it with the declaration, and commits
 # nothing. The run fails only if the declaration could not be checked; how it fared is in the report.
 
-name: Check a declaration
+name: Check a pasted TRO declaration
 
 on:
   workflow_dispatch:
