@@ -23,16 +23,6 @@ update-reviews: session
 build-candidates: session
 	$(RUN_IN_REPRO) 'bash make-candidates'
 
-# The tier and version a declaration is checked against unless others are given.
-TIER ?= STANDALONE-TRO
-VERSION ?= trace-main
-
-# For the "Check a pasted TRO declaration" workflow: check DECLARATION on its own and write its report to REPORT.
-# Fails only if the declaration could not be checked, not if it misses its tier.
-check-declaration: session
-	$(RUN_IN_REPRO) 'mkdir -p "$$(dirname "${REPRO_MNT}/$(REPORT)")" && check-tro --candidate "${REPRO_MNT}/$(DECLARATION)" --report "${REPRO_MNT}/$(REPORT)" \
-		--target-tier "$(TIER)" --target-version "$(VERSION)"; [ $$? -le 1 ]'
-
 # Create a multi-architecture Docker image builder named multiarch unless one already exists.
 create-image-builder:
 	docker buildx inspect multiarch > /dev/null 2>&1 || \
