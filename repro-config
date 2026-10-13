@@ -12,6 +12,9 @@ start:                  start-repro   ##
 # Add review-ledger's make reviews target if the review-ledger module has been initialized.
 -include .review-ledger/host-makefile
 
+# Add tro-checks' make install-tro-checks-gha target if the tro-checks module has been initialized.
+-include .tro-checks/host-makefile
+
 ## update-reviews:    Update REVIEWS.md without running the other reports.
 update-reviews: session
 	$(RUN_IN_REPRO) 'make -C ${REPRO_MNT}/.review-ledger -f report-makefile review'
