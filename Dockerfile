@@ -1,4 +1,4 @@
-FROM cirss/repro-parent:latest
+FROM ghcr.io/cirss/repro-parent:latest
 
 # Link the image to its repository on GitHub.
 LABEL org.opencontainers.image.source=https://github.com/CIRSS/tro-checks-sandbox
