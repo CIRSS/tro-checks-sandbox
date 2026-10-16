@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Make the candidate TRO declarations with tro-utils. Run from the repository directory.
+# Generate the candidate TRO declarations with tro-utils. Run from the repository directory.
 
 # ---- Setup -------------------------------------------------------------------
 
@@ -25,9 +25,9 @@ declaration_01=./candidates/01-builtin-trs-declaration.jsonld
 
 # trp/0 accesses arrangement/0 and contributes to arrangement/1.
 tro-utils --declaration "${declaration_01}" \
-    arrangement add ./arrangements/1-downloaded --comment "Downloaded"
+    arrangement add ./resources/arrangements/1-downloaded --comment "Downloaded"
 tro-utils --declaration "${declaration_01}" \
-    arrangement add ./arrangements/2-analyzed --comment "Analyzed"
+    arrangement add ./resources/arrangements/2-analyzed --comment "Analyzed"
 tro-utils --declaration "${declaration_01}" \
     performance add --comment "Analyze data.csv" \
     --start 2026-10-03T09:10:00 --end 2026-10-03T10:00:00 \
@@ -43,9 +43,9 @@ declaration_02=./candidates/02-readme-trs-declaration.jsonld
 
 # trp/0 accesses arrangement/0 and contributes to arrangement/1.
 tro-utils --declaration "${declaration_02}" --profile ./resources/readme-trs-declaration.jsonld \
-    arrangement add ./arrangements/0-staged --comment "Staged"
+    arrangement add ./resources/arrangements/0-staged --comment "Staged"
 tro-utils --declaration "${declaration_02}" \
-    arrangement add ./arrangements/1-downloaded --comment "Downloaded"
+    arrangement add ./resources/arrangements/1-downloaded --comment "Downloaded"
 tro-utils --declaration "${declaration_02}" \
     performance add --comment "Download data.csv" \
     --start 2026-10-03T09:00:00 --end 2026-10-03T09:05:00 \
@@ -54,7 +54,7 @@ tro-utils --declaration "${declaration_02}" \
 
 # trp/1 accesses arrangement/1 and contributes to arrangement/2.
 tro-utils --declaration "${declaration_02}" \
-    arrangement add ./arrangements/2-analyzed --comment "Analyzed"
+    arrangement add ./resources/arrangements/2-analyzed --comment "Analyzed"
 tro-utils --declaration "${declaration_02}" \
     performance add --comment "Analyze data.csv" \
     --start 2026-10-03T09:10:00 --end 2026-10-03T10:00:00 \
@@ -73,9 +73,9 @@ declaration_03=./candidates/03-readme-trs-declaration-signed.jsonld
 
 # trp/0 accesses arrangement/0 and contributes to arrangement/1.
 tro-utils --declaration "${declaration_03}" --profile ./resources/readme-trs-declaration.jsonld \
-    arrangement add ./arrangements/0-staged --comment "Staged"
+    arrangement add ./resources/arrangements/0-staged --comment "Staged"
 tro-utils --declaration "${declaration_03}" \
-    arrangement add ./arrangements/1-downloaded --comment "Downloaded"
+    arrangement add ./resources/arrangements/1-downloaded --comment "Downloaded"
 tro-utils --declaration "${declaration_03}" \
     performance add --comment "Download data.csv" \
     --start 2026-10-03T09:00:00 --end 2026-10-03T09:05:00 \
@@ -84,7 +84,7 @@ tro-utils --declaration "${declaration_03}" \
 
 # trp/1 accesses arrangement/1 and contributes to arrangement/2.
 tro-utils --declaration "${declaration_03}" \
-    arrangement add ./arrangements/2-analyzed --comment "Analyzed"
+    arrangement add ./resources/arrangements/2-analyzed --comment "Analyzed"
 tro-utils --declaration "${declaration_03}" \
     performance add --comment "Analyze data.csv" \
     --start 2026-10-03T09:10:00 --end 2026-10-03T10:00:00 \
@@ -93,7 +93,7 @@ tro-utils --declaration "${declaration_03}" \
 
 # trp/2 accesses arrangement/2 and contributes to arrangement/3.
 tro-utils --declaration "${declaration_03}" \
-    arrangement add ./arrangements/3-packaged --comment "Packaged"
+    arrangement add ./resources/arrangements/3-packaged --comment "Packaged"
 tro-utils --declaration "${declaration_03}" \
     performance add --comment "Package results.txt" \
     --start 2026-10-03T10:05:00 --end 2026-10-03T10:06:00 \

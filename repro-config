@@ -19,10 +19,6 @@ start:                  start-repro   ##
 update-reviews: session
 	$(RUN_IN_REPRO) 'make -C ${REPRO_MNT}/.review-ledger -f report-makefile review'
 
-## build-candidates:  Make the candidates with tro-utils from the arrangements and resources.
-build-candidates: session
-	$(RUN_IN_REPRO) 'bash make-candidates'
-
 # Create a multi-architecture Docker image builder named multiarch unless one already exists.
 create-image-builder:
 	docker buildx inspect multiarch > /dev/null 2>&1 || \
