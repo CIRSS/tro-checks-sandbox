@@ -34,4 +34,6 @@ ENV TRACE 'https://raw.githubusercontent.com/transparency-certified/${1}/${2}/ex
 RUN repro.require tro-checks workflows ${TRACE} --report
 RUN repro.require review-ledger main ${CIRSS} --report
 
+# Temporary comment to trigger Regenerate candidates, testing it as split into jobs per stage.
+
 CMD  /bin/bash -il
