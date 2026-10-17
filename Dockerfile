@@ -12,7 +12,7 @@ RUN apt-get update && \
 COPY resources/TRO_UTILS_VERSION.txt /tmp/
 RUN pip3 install "tro-utils==$(cat /tmp/TRO_UTILS_VERSION.txt)"
 
-# Install Node for running tro-checks.
+# Install Node, for running tro-checks.
 ENV NODE_VERSION=22.11.0
 RUN ARCH="$(dpkg --print-architecture)" && \
 	case "$ARCH" in \
